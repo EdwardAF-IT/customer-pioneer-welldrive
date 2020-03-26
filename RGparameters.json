@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sites_welldrivefa_name": {
+            "value": null
+        },
+        "workflows_welldrive_name": {
+            "value": null
+        },
+        "connections_azureblob_name": {
+            "value": null
+        },
+        "components_welldrivefa_name": {
+            "value": null
+        },
+        "storageAccounts_welldrivesa_name": {
+            "value": null
+        },
+        "storageAccounts_welldrivefasa_name": {
+            "value": null
+        },
+        "databaseAccounts_welldrivecosdb_name": {
+            "value": null
+        },
+        "serverfarms_ASP_CustomerPioneerCompletionsMocku_ba27_name": {
+            "value": null
+        },
+        "smartdetectoralertrules_failure_anomalies___welldrivefa_name": {
+            "value": null
+        },
+        "actiongroups_application_insights_smart_detection_externalid": {
+            "value": null
+        }
+    }
+}
