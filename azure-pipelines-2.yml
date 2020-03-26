@@ -24,3 +24,5 @@ steps:
     appType: 'functionAppLinux'
     appName: 'welldrivefa'
     package: '$(System.DefaultWorkingDirectory)/_EdwardAF-IT_customer-pioneer-welldrive/TestPy.py'
+
+- task: PublishBuildArtifacts@1
