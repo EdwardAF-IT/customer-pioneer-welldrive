@@ -39,6 +39,6 @@ steps:
     resourceGroupName: 'Customer-Pioneer-Completions-Test2'
     location: 'South Central US'
     templateLocation: 'Linked artifact'
-    csmFile: 'ADFtemplate'
-    csmParametersFile: 'ADFparameters'
+    csmFile: 'ADFtemplate.json'
+    csmParametersFile: 'ADFparameters.json'
     deploymentMode: 'Incremental'
