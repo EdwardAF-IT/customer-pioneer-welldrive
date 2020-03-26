@@ -190,7 +190,7 @@
             "name": "[parameters('connections_azureblob_name')]",
             "location": "southcentralus",
             "properties": {
-                "displayName": "welldriveblob1",
+                "displayName": "welldriveblobcon1",
                 "customParameterValues": {},
                 "api": {
                     "id": "[concat('/subscriptions/42a2eb5c-8d13-451c-8b50-069e05cdbf86/providers/Microsoft.Web/locations/southcentralus/managedApis/', parameters('connections_azureblob_name'))]"
