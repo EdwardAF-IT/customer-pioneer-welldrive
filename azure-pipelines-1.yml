@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -13,10 +14,16 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+    addToPath: true
+    architecture: 'x64'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+  
 - task: AzureFunctionApp@1
   inputs:
     azureSubscription: 'Visual Studio Ultimate with MSDN(1)(42a2eb5c-8d13-451c-8b50-069e05cdbf86)'
