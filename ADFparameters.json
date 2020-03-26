@@ -3,16 +3,16 @@
     "contentVersion":"1.0.0.0",
     "parameters":{  
         "dataFactoryName":{  
-            "value":"<datafactoryname>"
+            "value":"welldrivedftest2"
         },
         "dataFactoryLocation":{  
-            "value":"East US"
+            "value":"South Central US"
         },
         "storageAccountName":{  
-            "value":"<yourstorageaccountname>"
+            "value":"welldrivesatest2"
         },
         "storageAccountKey":{  
-            "value":"<yourstorageaccountkey>"
+            "value": "123"
         },
         "triggerStartTime":{  
             "value":"2019-09-08T11:00:00"
