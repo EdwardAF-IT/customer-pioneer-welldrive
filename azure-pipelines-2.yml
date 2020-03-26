@@ -1,28 +1,33 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- master
-
 pool:
-  vmImage: 'ubuntu-latest'
-
+  vmImage: ubuntu-16.04
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: UsePythonVersion@0
+  displayName: "Setting python version to 3.6 as required by functions"
+  inputs:
+    versionSpec: '3.6'
+    architecture: 'x64'
+- bash: |
+    if [ -f extensions.csproj ]
+    then
+        dotnet build extensions.csproj --output ./bin
+    fi
+    pip install --target="./.python_packages/lib/python3.6/site-packages" -r ./requirements.txt
+- task: ArchiveFiles@2
+  displayName: "Archive files"
+  inputs:
+    rootFolderOrFile: "$(System.DefaultWorkingDirectory)"
+    includeRootFolder: false
+    archiveFile: "$(System.DefaultWorkingDirectory)/build$(Build.BuildId).zip"
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/build$(Build.BuildId).zip'
+    artifactName: 'drop'
 
 - task: AzureFunctionApp@1
   inputs:
     azureSubscription: 'Visual Studio Ultimate with MSDN (42a2eb5c-8d13-451c-8b50-069e05cdbf86)'
     appType: 'functionAppLinux'
     appName: 'welldrivefa'
-    package: '$(System.DefaultWorkingDirectory)/_EdwardAF-IT_customer-pioneer-welldrive/TestPy.py'
+    package: '$(System.DefaultWorkingDirectory)/build$(Build.BuildId).zip'
 
 - task: PublishBuildArtifacts@1
