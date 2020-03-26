@@ -3,34 +3,34 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "sites_welldrivefa_name": {
-            "value": "welldrivefa"
+            "value": "welldrivefa-test1"
         },
         "workflows_welldrive_name": {
-            "value": "welldrive"
+            "value": "welldrive-test1"
         },
         "connections_azureblob_name": {
-            "value": "azureblob"
+            "value": "azureblob-test1"
         },
         "components_welldrivefa_name": {
-            "value": "welldrivefa"
+            "value": "welldrivefa-test1"
         },
         "storageAccounts_welldrivesa_name": {
-            "value": "welldrivesa"
+            "value": "welldrivesa-test1"
         },
         "storageAccounts_welldrivefasa_name": {
-            "value": "welldrivefasa"
+            "value": "welldrivefasa-test1"
         },
         "databaseAccounts_welldrivecosdb_name": {
-            "value": "welldrivecosdb"
+            "value": "welldrivecosdb-test1"
         },
         "serverfarms_ASP_CustomerPioneerCompletionsMocku_ba27_name": {
-            "value": "ASP-CustomerPioneerCompletionsMocku-ba27"
+            "value": "ASP-CustomerPioneerCompletionsMocku-ba27-test1"
         },
         "smartdetectoralertrules_failure_anomalies___welldrivefa_name": {
-            "value": "failure anomalies - welldrivefa"
+            "value": "failure anomalies - welldrivefa-test1"
         },
         "actiongroups_application_insights_smart_detection_externalid": {
-            "value": "/subscriptions/42a2eb5c-8d13-451c-8b50-069e05cdbf86/resourceGroups/smu/providers/microsoft.insights/actiongroups/application insights smart detection"
+            "value": "/subscriptions/42a2eb5c-8d13-451c-8b50-069e05cdbf86/resourceGroups/smu/providers/microsoft.insights/actiongroups/application insights smart detection-test1"
         }
     }
 }
